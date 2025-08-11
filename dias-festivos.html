@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.8" />
+  <title>Mural Informativo Escolar</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f5f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffffff;
+      color: #2649aa;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    header img {
+      width: 190px;
+      height: auto;
+    }
+
+    nav {
+      background-color: #3b82f6;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: #2563eb;
+      border-radius: 6px;
+    }
+
+    main {
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #1e3a8a;
+    }
+
+    .card small {
+      color: #555;
+    }
+
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* RESPONSIVE AJUSTES */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+
+      header img {
+        width: 150px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://github.com/Alexypunt/mural-liceo/blob/master/Image/Logo-liceo-horizontal-1.png?raw=true" alt="Logo liceo">
+    <h1 style="margin: 0;">Mural Informativo</h1>
+  </header>
+
+  <p id="fecha" style="text-align: center; font-weight: bold;"></p>
+
+  <nav>
+    <a href="noticias.html">Noticias</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="dias-festivos.html">Días festivos</a>
+    <a href="anuncios.html">Anuncios</a>
+    <a href="Index.html">Pagina principal</a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <h3>📢 𝐒𝐞 𝐢𝐧𝐢𝐜𝐢𝐚 𝐏𝐫𝐞𝐮𝐧𝐢𝐯𝐞𝐫𝐬𝐢𝐭𝐚𝐫𝐢𝐨 𝐩𝐚𝐫𝐚 𝟑° 𝐲 𝟒° 𝐌𝐞𝐝𝐢𝐨 𝐈𝐭𝐢𝐧𝐞𝐫𝐚𝐫𝐢𝐨 𝐔𝐧𝐢𝐯𝐞𝐫𝐬𝐢𝐭𝐚𝐫𝐢𝐨</h3>
+      <small>Publicado: 2 de agosto</small>
+      <p>Desde el lunes, las clases comenzarán a las 8:30 AM en vez de las 8:00 AM.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎉 Celebración del Día del Estudiante</h3>
+      <small>Publicado: 1 de agosto</small>
+      <p>Este viernes se realizará una actividad recreativa en el patio principal a las 11:00 AM.</p>
+    </div>
+
+    <div class="card">
+      <h3>📅 Feriado: 15 de agosto</h3>
+      <small>Publicado: 30 de julio</small>
+      <p>No habrá clases por conmemoración de la Asunción de la Virgen.</p>
+    </div>
+  </main>
+
+  <footer>
+    Hecho por axelypunt • Proyecto escolar 2025
+  </footer>
+
+  <script>
+    // Mostrar la fecha actual
+    const fecha = new Date();
+    const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("fecha").textContent = fecha.toLocaleDateString('es-ES', opciones);
+  </script>
+</body>
+</html>
